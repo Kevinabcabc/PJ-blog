@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh--cn" class="login">
+    <%- include("./head.ejs") %>
+    <body>
+        <%- include('./header.ejs') %>
+        <section class="main floatfix">
+            <%- include('./aside.ejs') %>
+            <section class="main-articles">
+                <form action="/sign" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="用户名">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="密码">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="confirm" placeholder="确认密码">
+                        <!-- 根据message提示用户注册的状态，如果不传入则隐藏 -->
+                        <% if(message){ %>
+                            <p><%= message %></p>
+                        <% } %> 
+                    </div>
+
+                    <div>
+                        <input type="submit" value="注册">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </body>
+</html>

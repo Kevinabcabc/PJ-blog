@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <%- include("./head.ejs") %>
+<body>
+  <%- include("./header.ejs") %>
+  <section class="main floatfix">
+    <%- include("./aside.ejs") %>
+    <section class="main-articles articles">
+      <section class="main-articles-title">
+        <h2><%= article.articleTitle %></h2>
+        <p>
+          <span>作者：<%= articles[i].articleAuthor %></span>
+          <span>发布时间：<%= articles[i].articleTime %></span>
+          <span>浏览量：<%= articles[i].articleClick %></span> 
+          <% if(articles[i].articleAuthor === user) {%>
+            <span class="modify"><a href="/modify/<%= articles[i]._id %>">编辑</a></span>
+            <span class="delete"><a href="/delete/<%= articles[i]._id %>">删除</a></span>
+          <% } %>    
+      </p>    
+      </section>
+      <section class="main-articles-content">
+        <p><%= article.articleContent %></p>
+      </section>
+    </section>
+  </section>
+</body>
+</html>

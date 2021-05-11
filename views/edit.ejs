@@ -1,0 +1,26 @@
+<!-- /src/views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <%- include("./head.ejs") %>
+  </head>
+  <body>
+    <%- include("./header.ejs") %>
+    <section class="main floatfix">
+      <%- include("./aside.ejs") %>
+      <section class="main-articles">
+        <form action="/edit" method="POST" class="edit">
+          <div class="form-group">
+            <label for="">标题</label>
+            <input type="text" name="title">
+          </div>
+          <div class="text-group">
+            <label for="">内容</label>
+            <textarea name="content" ></textarea>
+          </div>
+          <p><input type="submit" value="保存"></p>
+        </form>  
+      </section>    
+    </section>
+  </body>
+</html>

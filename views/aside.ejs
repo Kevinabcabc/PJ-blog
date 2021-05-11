@@ -1,0 +1,16 @@
+
+<aside>
+  <section class="main-aside-avatar">
+  </section>
+  <ul>
+      <li><a href="/">博客首页</a></li>
+      <li><a href="/edit">撰写博客</a></li>
+      <% if( user ){%>
+        <li><a href="/user">个人博客</a></li>
+          <li><a href="/logout">注销</a></li>
+      <% } else { %>
+          <li><a href="/login">登入</a></li>
+          <li><a href="/sign">注册</a></li>
+      <% } %>
+  </ul>
+</aside>

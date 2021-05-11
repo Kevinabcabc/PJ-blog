@@ -1,0 +1,356 @@
+/* 
+    通用
+*/
+a{
+  text-decoration: none;      
+  color: #000;
+}
+
+ul,li{
+  list-style: none;       
+  padding: 0;    
+}
+
+.float:after{
+  content: '';       
+  display: block;     
+  clear: both;        
+}
+
+.floatfix{
+  *zoom: 1;      
+}
+
+body{
+  background: #f0f0f0;
+  padding: 30px;
+}
+
+footer{
+  position: absolute;
+  bottom: 20px;       
+  display: block;
+  width: 100%;
+}
+
+
+
+/* 
+  登录页面
+*/
+.login,.login body{
+  height: 100%;
+  width: 100%;
+}
+
+.login body{
+  background-image: url('../images/login.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.form-group input{
+  height: 24px;
+}
+
+footer p{
+  text-align: center;     
+  line-height: 1.5em;     
+  margin: 0;     
+}
+
+.form-group,.text-group{
+  padding: 0 20 10px;     
+}
+
+.form-group{
+  height: 40px;
+}
+
+.form-group label{
+  width: 43px;
+  text-align: right;
+  display: inline-block;      
+}
+
+.form-group input{
+  border: 1px solid #c0c0c0;     
+  border-radius: 3px;     
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.text-group textarea{
+  height: 820px;
+}
+
+.text-group label{
+  vertical-align: top;        
+}
+
+.login .form-group p{
+  margin: 0;
+  font-size: 12px;
+  color: #d20505;
+  line-height: 20px;
+}
+
+.login form{
+  width: 320px;
+  position: absolute;     
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -125px;
+}
+
+.login form input{
+  width: 300px;
+  background: #fff;
+  margin: 0;
+}
+
+.login form input[type='submit']{
+  width: 90px;
+  display: block;
+  margin: 5px auto;
+  height: 40px;
+  background: #183d8e;
+  color: #fff;
+  cursor: pointer;       
+} 
+
+.login footer{
+  position: absolute;
+  bottom: 20px;       
+  display: block;
+  width: 100%;
+}
+
+/* 
+  主页面
+*/
+
+header{
+  height: 135px;
+  background-color: #000;
+  background-position: center;
+  margin-bottom: 25px;
+}
+
+header h1{
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  line-height: 35px;
+  padding: 50px 0;
+  word-spacing: 0.5em;
+}
+
+.main{
+  padding: 0 15px;
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+aside{
+  width: 180px;
+  padding: 9px;
+  border: 1px solid #c0c0c0;
+  float: left;
+  min-height: 450px;
+  height: 100%;
+}
+
+aside ul li{
+  list-style: none;
+  height: 30px;
+  text-align: center;
+}
+
+aside ul li a{
+  font-size: 16px;
+  line-height: 30px;
+}
+
+aside ul li a:hover{
+  color: #183d8e;
+}
+
+.main-aside-avatar{
+  margin-bottom: 10px;
+}
+
+.main-aside-avatar img{
+  width: 100%;
+}
+
+.main-articles{
+  margin-left: 220px;
+}
+
+.main-articles-item{
+  height: 80px;
+  border: 1px solid #c0c0c0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.main-articles-item:last-child{
+  margin-bottom: 0;
+}
+
+.main-articles-item h2{
+  margin: 0;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.main-articles-items-des span{
+  padding-right: 8px;
+  color: #333;
+  font-size: 14px;
+}
+
+.main-articles ul{
+  padding-right: 65px;
+}
+
+
+@keyframes move{        /* 声明一个move动画 创建动画是通过逐步改变从一个CSS样式设定到另一个 注：动画移动的效果可以让元素和其他元素重叠*/
+  form{
+      transform: translate(0px, 0);   /* 声明xy坐标移动量 从原来位置向右移动了 10px xy正直表示向右/下 移动 */
+  }
+  to{
+      transform: translate(10px, 0);
+  }
+}
+
+.main-articles-item:hover{
+  animation: move 1s;       /* 定义绑定的动画 和播放时间 */
+  animation-fill-mode: forwards;  /* animation-fill-mode 属性规定动画在播放之前或之后，其动画效果是否可见 即播完动画后除非鼠标移出否则就定格样式 */
+}
+
+span.modify{
+  float: right;
+}
+
+span.modify a:hover{
+  color: #183d8e;
+}
+
+span.delete{
+  float: right;
+  margin-right: 20px;
+}
+
+span.delete a:hover{
+  color: #183d8e;
+}
+
+.page{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.page span{
+  display: inline-block;
+  background: #fff;
+  width: 24px;
+  margin: 0 5px;
+  line-height: 24px;
+  height: 24px;
+}
+
+.page span a{
+  display: block;
+}
+
+.page span .active a{
+  background: #183d8e;
+  color: #fff;
+}
+
+.page span:hover a{
+  background: #183d8e;
+  color: #fff;
+}
+
+/* 
+  文章内容页
+*/
+
+section.articles{
+  border: 1px solid #c0c0c0;
+  min-height: 468px;
+  padding: 0 15px;
+}
+
+.main-articles-title{
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.main-articles-title h2{
+  text-align: center;
+}
+
+.main-articles-title p{
+  font-size: 14px;
+  text-align: center;
+}
+
+.main-articles-title p span{
+  padding: 0 10px;
+}
+
+.main-articles-content p{
+  text-indent: 2em;       /* 文本首行缩进 */
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+
+/* 
+  写文章页
+*/
+
+.edit label, .editp label{
+  width: 10%;
+  text-align: right;
+  display: inline-block;
+}
+
+.edit input, .edit textarea{
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+  width: 85%;
+  padding: 6px 5px;
+  margin-left: 20px;
+}
+
+.edit p{
+  text-align: center;
+}
+
+.edit input[type="submit"]{
+  width: 90px;
+  height: 40px;
+  background: #183dbe;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group input{
+  height: 24px;
+}
+
+.text-group textarea{
+  height: 350px;
+}
+
+.text-group label{
+  vertical-align: top;
+}

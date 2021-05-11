@@ -1,0 +1,27 @@
+<!-- /src/views/login.ejs -->
+<!DOCTYPE html>
+<html lang="zh--cn" class="login">
+    <%- include("./head.ejs") %>
+    <body>
+        <%- include('./header.ejs') %>
+        <section class="main floatfix">
+            <%- include('./aside.ejs') %>
+            <section class="main-articles">
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="密码">
+                        <% if(message){ %>
+                            <p><%= message %></p>
+                        <% } %> 
+                    </div>
+                    <div>
+                        <input type="submit" value="登入">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </body>
+</html>

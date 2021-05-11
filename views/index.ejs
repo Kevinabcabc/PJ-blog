@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./head.ejs') %>
+    <body>
+        <%- include('./header.ejs') %>
+        <section class="main floatfix">
+            <%- include('./aside.ejs') %>
+            <section class="main-articles">
+                <ul>
+                    <% for(let i=0; i<articles.length; i++){ %>
+                        <li class="main-articles-item">
+                            <h2><a href="/articles/<%= articles[i]._id %>"><%= articles[i].articleTitle %></a></h2>
+                            <section class="main-articles-item-des">
+                                <p>
+                                    <span>作者：<%= articles[i].articlesAuthor %></span>
+                                    <span>发布时间：<%= articles[i].articleTime %></span>
+                                    <span>浏览量：<%= articles[i].articleClick %></span>
+                                    <span class="modeify"><a href="/modefy/<%= articles[i]._id  %>">编辑</a></span>
+                                    <span class="delete"><a href="/delete/<%= articles[i]._id  %>">删除</a></span>
+                                </p>
+                            </section>
+                        </li>
+                    <% } %>
+                </ul>
+                
+                <!-- 如果总文章数大于每页最大显示数则显示分页栏 -->
+                <% if(pageNum > 1){ %>
+                    <section class="page">
+                    <% for(var i = 1; i <= pageNum; i++){ %>
+                        <span <% if(i==page){ %> class="active" <% } %> >
+                        <a href="/?page=<%= i %>"> <%= i %> </a>
+                        </span>
+                    <% } %>
+                    </section>
+                <% } %> 
+
+            </section>
+        </section>
+    </body>
+</html>
